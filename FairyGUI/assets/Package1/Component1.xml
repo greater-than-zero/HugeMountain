@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <component id="n0_yqr5" name="n0" src="yqr51" fileName="Button1.xml" xy="491,373">
+      <Button title="aaa" selectedTitle="aaaaa"/>
+    </component>
+  </displayList>
+</component>
