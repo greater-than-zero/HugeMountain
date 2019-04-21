@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using FairyGUI;
 
-public class Main : MonoBehaviour
+public class Main : UIBase
 {
-    private GComponent _mainView;
     private GButton _button;
 
     void Start()
