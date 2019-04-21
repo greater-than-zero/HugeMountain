@@ -7,9 +7,15 @@ using System;
 public class UIMgr : MonoBehaviour {
     private Dictionary<string, UIBase> _uiMap = new Dictionary<string, UIBase>();
     private Dictionary<string, Type> _uiClassMap = new Dictionary<string, Type>();
+    private List<string> _cachaNameList = new List<string>();
 
     static int MaxCacheUI = 10;
     static bool NotDiposeCacheUI = true;
+    static public UIMgr ins;
+
+    void Awake() {
+        ins = this;
+    }
 
     void Start() {
 #if UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_EDITOR
@@ -40,7 +46,6 @@ public class UIMgr : MonoBehaviour {
 
     void initMgr() {
         register("Main", typeof(Main2));
-        openWindow("Main");
     }
 
     void register(string name, Type ui) {
@@ -53,7 +58,7 @@ public class UIMgr : MonoBehaviour {
     /*
      * 打开UI界面
      */
-    UIBase openWindow(string name) {
+    public UIBase openWindow(string name) {
         UIBase uiBase = null;
         if (_uiMap.ContainsKey(name)) {
             uiBase = _uiMap[name];
@@ -66,32 +71,45 @@ public class UIMgr : MonoBehaviour {
             uiObject.transform.parent = gameObject.transform;
             _uiMap.Add(name, uiBase);
         }
+        _cachaNameList.Add(name);
         return uiBase;
     }
 
     /*
      * 关闭UI界面
      */
-    void closeWindow(string name) {
+    public void closeWindow(string name) {
         UIBase uiBase = null;
-        if (_uiMap.ContainsKey(name)) {
-            uiBase = _uiMap[name];
-            uiBase.onClose();
-        } else {
+        if (!_uiMap.ContainsKey(name)) {
             return;
         }
+
+        uiBase = _uiMap[name];
+        uiBase.onClose();
 
         if (!NotDiposeCacheUI) {
             uiBase.gameObject.transform.parent = null;
             Destroy(uiBase.gameObject);
+            _cachaNameList.Remove(name);
+            _uiMap.Remove(name);
             return;
         }
 
         //缓存UI数量
         if (_uiMap.Count >= MaxCacheUI) {
-            uiBase.gameObject.transform.parent = null;
-            Destroy(uiBase.gameObject);
-            _uiMap.Remove(name);
+            int lastIndex = _cachaNameList.Count - 1;
+            if (lastIndex < 0 || lastIndex > _cachaNameList.Count - 1) {
+                return;
+            }
+
+            string lastName = _cachaNameList[lastIndex];
+            _cachaNameList.RemoveAt(lastIndex);
+            if (_uiMap.ContainsKey(name)) {
+                uiBase = _uiMap[name];
+                uiBase.gameObject.transform.parent = null;
+                Destroy(uiBase.gameObject);
+                _uiMap.Remove(name);
+            }
         } else {
             uiBase.gameObject.SetActive(false);
         }

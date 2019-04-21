@@ -10,6 +10,8 @@ public class Main2 : UIBase
     override public void onOpen() {
         _button = _mainView.GetChild("n0").asButton;
         _button.onClick.Add(this.onClickN0Btn);
+        Game.ins.on("dddd", TestMessageEevn);
+        Game.ins.on("dddd", TestMessageEevn2);
     }
 
     override public void initBase() {
@@ -17,8 +19,19 @@ public class Main2 : UIBase
         _componentName = "Component1";
     }
 
-    private void onClickN0Btn()
-    {
+    private void onClickN0Btn() {
+        Game.ins.emit("dddd", new ArrayList() { 111, "aaa", 222 });
         print("Hi! FairyGUI!");
+        Game.ins.off("dddd", TestMessageEevn2);
+    }
+
+    private void TestMessageEevn(ArrayList arrayList) {
+        Debug.Log(arrayList[0]);
+        Debug.Log(arrayList[1]);
+        Debug.Log(arrayList[2]);
+    }
+
+    private void TestMessageEevn2(ArrayList arrayList) {
+        Debug.Log("TestMessageEevn2");
     }
 }

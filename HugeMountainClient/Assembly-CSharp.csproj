@@ -205,6 +205,8 @@
      <Compile Include="Assets\Scripts\FairyGUI\Utils\XMLList.cs" />
      <Compile Include="Assets\Scripts\FairyGUI\Utils\XMLUtils.cs" />
      <Compile Include="Assets\Scripts\FairyGUI\Utils\ZipReader.cs" />
+     <Compile Include="Assets\Scripts\Game\Game.cs" />
+     <Compile Include="Assets\Scripts\Message\MessageCenter.cs" />
      <Compile Include="Assets\Scripts\UI\Main.cs" />
      <Compile Include="Assets\Scripts\UI\Main2.cs" />
      <Compile Include="Assets\Scripts\UI\UIBase.cs" />

@@ -10,6 +10,7 @@ public class UIBase : MonoBehaviour {
 
     private void Start() {
         initBase();
+        UIPackage.AddPackage("UI/" + _packageName);
         UIPanel uiPanel = gameObject.AddComponent<UIPanel>();
         uiPanel.packageName = _packageName;
         uiPanel.componentName = _componentName;
