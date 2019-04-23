@@ -8,11 +8,14 @@ public class Game : MonoBehaviour
 {
     static public Game ins;
 
+    private LogicMgr logicMgr = new LogicMgr();
+
     void Awake() {
         ins = this;
     }
 
     void Start() {
+        logicMgr.initLoigc();
         loadUIPackage();
     }
 

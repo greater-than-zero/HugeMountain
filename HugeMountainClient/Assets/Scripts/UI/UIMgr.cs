@@ -8,6 +8,7 @@ public class UIMgr : MonoBehaviour {
     private Dictionary<string, UIBase> _uiMap = new Dictionary<string, UIBase>();
     private Dictionary<string, Type> _uiClassMap = new Dictionary<string, Type>();
     private List<string> _cachaNameList = new List<string>();
+    private FairyGUIMgr _fairyGUImgr = new FairyGUIMgr();
 
     static int MaxCacheUI = 10;
     static bool NotDiposeCacheUI = true;
@@ -18,25 +19,7 @@ public class UIMgr : MonoBehaviour {
     }
 
     void Start() {
-#if UNITY_WEBPLAYER || UNITY_WEBGL || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_EDITOR
-        CopyPastePatch.Apply();
-#endif
-
-#if (UNITY_5 || UNITY_5_3_OR_NEWER)
-        //Use the font names directly
-        UIConfig.defaultFont = "Microsoft YaHei";
-#else
-		//Need to put a ttf file into Resources folder. Here is the file name of the ttf file.
-		UIConfig.defaultFont = "afont";
-#endif
-        /*
-        UIPackage.AddPackage("UI/Basics");
-
-        UIConfig.verticalScrollBar = "ui://Basics/ScrollBar_VT";
-        UIConfig.horizontalScrollBar = "ui://Basics/ScrollBar_HZ";
-        UIConfig.popupMenu = "ui://Basics/PopupMenu";
-        UIConfig.buttonSound = (NAudioClip)UIPackage.GetItemAsset("Basics", "click");
-        */
+        _fairyGUImgr.initMgr();
         initMgr();
     }
 
@@ -45,7 +28,7 @@ public class UIMgr : MonoBehaviour {
     }
 
     void initMgr() {
-        register("Main", typeof(Main2));
+        register("Main", typeof(Main));
     }
 
     void register(string name, Type ui) {
