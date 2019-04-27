@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1024,768">
+  <displayList>
+    <component id="n1_x2c6" name="n1" src="x2c62" fileName="Button2.xml" pkg="82x8nri2" xy="85,384">
+      <Button title="开始游戏"/>
+    </component>
+    <component id="n2_x2c6" name="n2" src="x2c62" fileName="Button2.xml" pkg="82x8nri2" xy="85,444">
+      <Button title="游戏设置"/>
+    </component>
+    <component id="n3_x2c6" name="n3" src="x2c62" fileName="Button2.xml" pkg="82x8nri2" xy="86,504">
+      <Button title="开发成员列表"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{73A5D47D-3A13-F979-9154-9AA49A202005}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Logic/LogicMgr.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Config/EventConfig.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/Game/Game.cs" Line="19" Column="25" />
+      <File FileName="Assets/Scripts/UI/UIMgr.cs" Line="22" Column="26" />
+      <File FileName="Assets/Scripts/UI/FairyGUIMgr.cs" Line="36" Column="2" />
+      <File FileName="Assets/Scripts/UI/Main/MainUI.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/UI/Base/UIBase.cs" Line="31" Column="35" />
+      <File FileName="Assets/Scripts/Logic/LogicMgr.cs" Line="19" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HugeMountainClient" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Config" expanded="True" />
+                <Node name="Game" expanded="True" />
+                <Node name="Logic" expanded="True">
+                  <Node name="LogicMgr.cs" selected="True" />
+                </Node>
+                <Node name="Message" expanded="True" />
+                <Node name="UI" expanded="True">
+                  <Node name="Base" expanded="True" />
+                  <Node name="Main" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e5600ddf-5530-4090-ab9b-834b5821f31b" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

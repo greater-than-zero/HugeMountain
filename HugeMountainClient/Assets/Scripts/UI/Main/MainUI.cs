@@ -7,12 +7,12 @@ public class Main : UIBase {
     private GButton _button;
 
     override public void initUI() {
-        _packageName = "Package1";
-        _componentName = "Component1";
+        _packageName = "Main";
+        _componentName = "MainUI";
     }
 
     override public void onOpen() {
-        _button = _mainView.GetChild("n0").asButton;
+        _button = _mainView.GetChild("n1").asButton;
         _button.onClick.Add(onClickN0Btn);
         Game.ins.on("dddd", TestMessageEevn);
         Game.ins.on("dddd", TestMessageEevn2);

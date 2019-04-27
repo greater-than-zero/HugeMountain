@@ -14,6 +14,7 @@ public class UIBase : MonoBehaviour {
         UIPanel uiPanel = gameObject.AddComponent<UIPanel>();
         uiPanel.packageName = _packageName;
         uiPanel.componentName = _componentName;
+        uiPanel.fitScreen = FitScreen.FitWidthAndSetMiddle;
         uiPanel.CreateUI();
         _mainView = GetComponent<UIPanel>().ui;
         onOpen();
