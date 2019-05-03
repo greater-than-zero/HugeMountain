@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{73A5D47D-3A13-F979-9154-9AA49A202005}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Message/MessageCenter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/UIMgr.cs">
     <Files>
       <File FileName="Assets/Scripts/Config/EventConfig.cs" Line="10" Column="1" />
-      <File FileName="Assets/Scripts/Game/Game.cs" Line="11" Column="22" />
-      <File FileName="Assets/Scripts/UI/UIMgr.cs" Line="22" Column="26" />
+      <File FileName="Assets/Scripts/Game/Game.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/UI/UIMgr.cs" Line="54" Column="37" />
       <File FileName="Assets/Scripts/UI/FairyGUIMgr.cs" Line="36" Column="2" />
       <File FileName="Assets/Scripts/UI/Main/MainUI.cs" Line="20" Column="1" />
       <File FileName="Assets/Scripts/UI/Base/UIBase.cs" Line="27" Column="34" />
       <File FileName="Assets/Scripts/Logic/LogicMgr.cs" Line="47" Column="6" />
-      <File FileName="Assets/Scripts/Message/MessageCenter.cs" Line="19" Column="10" />
+      <File FileName="Assets/Scripts/Message/MessageCenter.cs" Line="43" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,12 +19,11 @@
                 <Node name="Config" expanded="True" />
                 <Node name="Game" expanded="True" />
                 <Node name="Logic" expanded="True" />
-                <Node name="Message" expanded="True">
-                  <Node name="MessageCenter.cs" selected="True" />
-                </Node>
+                <Node name="Message" expanded="True" />
                 <Node name="UI" expanded="True">
                   <Node name="Base" expanded="True" />
                   <Node name="Main" expanded="True" />
+                  <Node name="UIMgr.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
