@@ -4,8 +4,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using System;
 
-public class Game : MonoBehaviour
-{
+public class Game : MonoBehaviour {
     static public Game ins;
 
     private LogicMgr _logicMgr = new LogicMgr();

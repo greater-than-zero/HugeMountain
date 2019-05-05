@@ -214,6 +214,9 @@
     <Compile Include="Assets\Scripts\FairyGUI\Utils\XMLList.cs" />
     <Compile Include="Assets\Scripts\FairyGUI\Utils\XMLUtils.cs" />
     <Compile Include="Assets\Scripts\FairyGUI\Utils\ZipReader.cs" />
+    <Compile Include="Assets\Scripts\Game\Battle\BattleMgr.cs" />
+    <Compile Include="Assets\Scripts\Game\Battle\Item\ItemBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Battle\Map\MapMgr.cs" />
     <Compile Include="Assets\Scripts\Game\Battle\Role\Role.cs" />
     <Compile Include="Assets\Scripts\Game\Game.cs" />
     <Compile Include="Assets\Scripts\Logic\Base\LogicBase.cs" />

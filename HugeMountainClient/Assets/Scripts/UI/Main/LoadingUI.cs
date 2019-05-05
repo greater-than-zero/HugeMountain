@@ -9,6 +9,9 @@ public class LoadingUI : UIBase {
     }
 
     override public void onOpen() {
+        BattleMgr.ins.beginBattle();
+    }
 
+    public override void onClose() {
     }
 }
