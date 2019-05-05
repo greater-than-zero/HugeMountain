@@ -27,7 +27,7 @@ public class Game : MonoBehaviour
      * 加载UI包
      */
     private async void loadUIPackage() {
-        await Task.Delay(5000);
+        await Task.Delay(1000);
         onInitGameFinish();
     }
 

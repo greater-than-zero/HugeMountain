@@ -29,6 +29,7 @@ public class UIMgr : MonoBehaviour {
 
     void initMgr() {
         register("Main", typeof(Main));
+        register("Loading", typeof(LoadingUI));
     }
 
     void register(string name, Type ui) {
@@ -46,13 +47,16 @@ public class UIMgr : MonoBehaviour {
         if (_uiMap.ContainsKey(name)) {
             uiBase = _uiMap[name];
             uiBase.onOpen();
-        } else {
+        } else if (_uiClassMap.ContainsKey(name)) {
             Type uiClassType = _uiClassMap[name];
-            GameObject uiObject = new GameObject("uiPanel");
+            GameObject uiObject = new GameObject(name);
             uiObject.layer = 5;
             uiBase = (UIBase)uiObject.AddComponent(uiClassType);
             uiObject.transform.parent = gameObject.transform;
             _uiMap.Add(name, uiBase);
+        } else {
+            Debug.LogError("Window Name is Not Find!!!");
+            return uiBase;
         }
         _cachaNameList.Add(name);
         return uiBase;

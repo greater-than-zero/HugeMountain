@@ -2,13 +2,13 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/UIMgr.cs">
     <Files>
       <File FileName="Assets/Scripts/Config/EventConfig.cs" Line="10" Column="1" />
-      <File FileName="Assets/Scripts/Game/Game.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/UI/UIMgr.cs" Line="54" Column="37" />
-      <File FileName="Assets/Scripts/UI/FairyGUIMgr.cs" Line="36" Column="2" />
-      <File FileName="Assets/Scripts/UI/Main/MainUI.cs" Line="20" Column="1" />
-      <File FileName="Assets/Scripts/UI/Base/UIBase.cs" Line="27" Column="34" />
+      <File FileName="Assets/Scripts/Game/Game.cs" Line="28" Column="8" />
+      <File FileName="Assets/Scripts/UI/UIMgr.cs" Line="57" Column="17" />
+      <File FileName="Assets/Scripts/UI/Base/UIBase.cs" Line="21" Column="6" />
       <File FileName="Assets/Scripts/Logic/LogicMgr.cs" Line="47" Column="6" />
-      <File FileName="Assets/Scripts/Message/MessageCenter.cs" Line="43" Column="10" />
+      <File FileName="Assets/Scripts/Message/MessageCenter.cs" Line="45" Column="28" />
+      <File FileName="Assets/Scripts/UI/Main/LoadingUI.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/UI/Main/MainUI.cs" Line="45" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -34,7 +34,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e5600ddf-5530-4090-ab9b-834b5821f31b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="47ef9b1e-a29b-4d58-a287-034050c1f17b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

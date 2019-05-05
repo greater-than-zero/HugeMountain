@@ -4,7 +4,7 @@ using UnityEngine;
 using FairyGUI;
 
 public class UIBase : MonoBehaviour {
-    protected GComponent _mainView;
+    protected GComponent _view;
     protected string _packageName;
     protected string _componentName;
 
@@ -14,9 +14,9 @@ public class UIBase : MonoBehaviour {
         UIPanel uiPanel = gameObject.AddComponent<UIPanel>();
         uiPanel.packageName = _packageName;
         uiPanel.componentName = _componentName;
-        uiPanel.fitScreen = FitScreen.FitWidthAndSetMiddle;
+        uiPanel.fitScreen = FitScreen.FitSize;
         uiPanel.CreateUI();
-        _mainView = GetComponent<UIPanel>().ui;
+        _view = GetComponent<UIPanel>().ui;
         onOpen();
     }
 

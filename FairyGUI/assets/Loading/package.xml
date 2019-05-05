@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="1rcu1jz0" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="x2c61" name="LoadingUI.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="Loading"/>
+</packageDescription>

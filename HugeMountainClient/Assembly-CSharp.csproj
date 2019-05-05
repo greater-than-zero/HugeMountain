@@ -221,6 +221,7 @@
     <Compile Include="Assets\Scripts\Message\MessageCenter.cs" />
     <Compile Include="Assets\Scripts\UI\Base\UIBase.cs" />
     <Compile Include="Assets\Scripts\UI\FairyGUIMgr.cs" />
+    <Compile Include="Assets\Scripts\UI\Main\LoadingUI.cs" />
     <Compile Include="Assets\Scripts\UI\Main\MainUI.cs" />
     <Compile Include="Assets\Scripts\UI\UIMgr.cs" />
     <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
