@@ -11,4 +11,8 @@ public class MapMgr : MonoBehaviour {
     void Update() {
 
     }
+
+    public void loadMap() {
+
+    }
 }

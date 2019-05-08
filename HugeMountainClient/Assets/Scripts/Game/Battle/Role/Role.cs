@@ -5,8 +5,15 @@ using System.Linq;
 public class Role : MonoBehaviour {
     public int hp = 0;
     public int mp = 0;
+    public int maxHp = 0;
+    public int maxMp = 0;
+    public bool isDead;
+
     public Vector2 speed = new Vector2(10, 10);
     private Rigidbody2D _rigidbody;
+
+    private SkillMgr _skillMgr = new SkillMgr();
+    private BuffMgr _buffMgr = new BuffMgr();
 
     private void Awake() {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
@@ -22,11 +29,29 @@ public class Role : MonoBehaviour {
     }
 
     void Update() {
+        _skillMgr.update();
+        _buffMgr.update();
+    }
 
+    public void initRole() {
+        _skillMgr.initMgr();
+        _buffMgr.initBuff();
     }
 
     public void moveRole(float x, float y) {
         Vector2 transformValue = new Vector2(x, y);
         _rigidbody.AddForce(transformValue * speed);
+    }
+
+    public void jump() {
+
+    }
+
+    public bool attack() {
+        return false;
+    }
+
+    public void dead() {
+
     }
 }
