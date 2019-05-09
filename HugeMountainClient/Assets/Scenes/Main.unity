@@ -214,7 +214,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   mp: 0
-  speed: 0
+  attSpeed: 0
+  missRate: 0
+  powerAttRate: 0
+  maxHp: 0
+  maxMp: 0
+  isDead: 0
+  speed: {x: 10, y: 10}
 --- !u!1 &500748713
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +593,6 @@ GameObject:
   - component: {fileID: 1248386001}
   - component: {fileID: 1248386004}
   - component: {fileID: 1248386003}
-  - component: {fileID: 1248386005}
   m_Layer: 0
   m_Name: ball_002
   m_TagString: Untagged
@@ -657,6 +662,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248386003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248386000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582d449a4495c4a0dbb51ab9755d0cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  mp: 0
+  attSpeed: 0
+  missRate: 0
+  powerAttRate: 0
+  maxHp: 0
+  maxMp: 0
+  isDead: 0
+  speed: {x: 10, y: 10}
+--- !u!114 &1248386004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248386000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0daa8e17454943b1825d4ac60d39e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1645776457
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896236868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.888889, y: -5, z: 0}
+  m_LocalPosition: {x: 8.913043, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
