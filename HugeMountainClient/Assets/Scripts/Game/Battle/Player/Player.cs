@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MapMgr : MonoBehaviour {
+public class Player : Role {
     // Use this for initialization
     void Start() {
 
@@ -11,8 +11,5 @@ public class MapMgr : MonoBehaviour {
     void Update() {
 
     }
-
-    public void loadMap() {
-
-    }
 }
+

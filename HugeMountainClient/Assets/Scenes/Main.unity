@@ -585,6 +585,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1248386002}
   - component: {fileID: 1248386001}
+  - component: {fileID: 1248386004}
+  - component: {fileID: 1248386003}
+  - component: {fileID: 1248386005}
   m_Layer: 0
   m_Name: ball_002
   m_TagString: Untagged
