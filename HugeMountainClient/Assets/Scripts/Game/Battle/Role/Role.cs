@@ -38,7 +38,7 @@ public class Role : MonoBehaviour {
 
     public void initRole() {
         _skillMgr.initMgr();
-        _buffMgr.initBuff();
+        _buffMgr.initMgr();
     }
 
     public void moveRole(float x, float y) {

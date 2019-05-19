@@ -16,7 +16,7 @@ public class BuffMgr {
     private Dictionary<string, List<BuffBaseItem>> _mapBuff = new Dictionary<string, List<BuffBaseItem>>();
     private float _nowTime;
 
-    public void init() {
+    public void initMgr() {
         _nowTime = 0;
     }
 
