@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\MapEditorToolSet.cs" />
     <Compile Include="Assets\Scripts\FairyGUI\Editor\DisplayObjectEditor.cs" />
     <Compile Include="Assets\Scripts\FairyGUI\Editor\EditorToolSet.cs" />
     <Compile Include="Assets\Scripts\FairyGUI\Editor\PackagesWindow.cs" />

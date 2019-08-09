@@ -220,6 +220,7 @@
     <Compile Include="Assets\Scripts\Game\Battle\Buff\BuffBaseItem.cs" />
     <Compile Include="Assets\Scripts\Game\Battle\Buff\BuffMgr.cs" />
     <Compile Include="Assets\Scripts\Game\Battle\Item\ItemBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Battle\Map\MapItem\MapItemBase.cs" />
     <Compile Include="Assets\Scripts\Game\Battle\Map\MapMgr.cs" />
     <Compile Include="Assets\Scripts\Game\Battle\Player\MainPlayer.cs" />
     <Compile Include="Assets\Scripts\Game\Battle\Player\Player.cs" />
