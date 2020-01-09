@@ -41,7 +41,7 @@ public class BattleMgr : MonoBehaviour {
         }
     }
 
-    public async void generateMap(int level) {
+    public void generateMap(int level) {
 
     }
 }

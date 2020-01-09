@@ -7,14 +7,14 @@ using System;
 public class Game : MonoBehaviour {
     static public Game ins;
 
-    private LogicMgr _logicMgr = new LogicMgr();
+    public LogicMgr logicMgr { get; } = new LogicMgr();
 
     void Awake() {
         ins = this;
     }
 
     void Start() {
-        _logicMgr.initLoigc();
+        logicMgr.initLoigc();
         loadUIPackage();
     }
 
@@ -31,7 +31,8 @@ public class Game : MonoBehaviour {
     }
 
     private void onInitGameFinish() {
-        UIMgr.ins.openWindow("Main");
+        BattleMgr.ins.beginBattle();
+        //UIMgr.ins.openWindow("Main");
     }
 
     public void on(string eventName, Action<ArrayList> action) {

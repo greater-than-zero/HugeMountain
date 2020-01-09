@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - Game
-  - 
-  - 
+  - Gourd
+  - Player
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Backgourd
+    uniqueID: 2009697589
+    locked: 0
+  - name: Patforms
+    uniqueID: 3554238449
+    locked: 0
+  - name: Player
+    uniqueID: 1791159033
+    locked: 0
+  - name: Forgourd
+    uniqueID: 34739713
     locked: 0
