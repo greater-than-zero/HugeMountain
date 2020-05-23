@@ -19,6 +19,10 @@ public class MainPlayer : MonoBehaviour {
         isJump = Input.GetButtonDown("Jump");
         isJumpHold = Input.GetButton("Jump");
 
+        if (Input.GetButton("z")) {
+            _player.attack();
+        }
+
         _player.moveRole(H, V);
     }
 

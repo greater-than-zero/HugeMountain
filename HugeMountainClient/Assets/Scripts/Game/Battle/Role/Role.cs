@@ -27,35 +27,57 @@ public class Role : MonoBehaviour {
     public int maxMp = 0;
     public bool isDead;
 
-    public Vector2 speed = new Vector2(10, 0);
+    public Vector2 speed = new Vector2(5, 0);
     private Rigidbody2D _rigidbody;
     private BoxCollider2D _coll;
+    private Animator _animator;
 
     private SkillMgr _skillMgr = new SkillMgr();
     private BuffMgr _buffMgr = new BuffMgr();
 
-    private void Awake() {
+    private int _hitCount = 0;
+    private AnimatorStateInfo _playerAnimInfo;
+
+
+    virtual public void Awake() {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
         if (_rigidbody == null) {
             _rigidbody = gameObject.AddComponent<Rigidbody2D>();
         }
 
         _coll = gameObject.GetComponent<BoxCollider2D>();
-        if (_coll == null) {
-            _coll = gameObject.AddComponent<BoxCollider2D>();
+        _animator = gameObject.GetComponent<Animator>();
+    }
+
+    virtual public void Start() {
+
+    }
+
+    virtual public void Update() {
+        _skillMgr.update();
+        _buffMgr.update();
+
+        _playerAnimInfo = _animator.GetCurrentAnimatorStateInfo(0);
+        if ((_playerAnimInfo.IsName("Attack1") ||
+            _playerAnimInfo.IsName("Attack2")) && _playerAnimInfo.normalizedTime > 1.0f) {
+            if (_playerAnimInfo.IsName("Attack1")) {
+                Debug.Log("Attack1");
+            } else if (_playerAnimInfo.IsName("Attack2")) {
+                Debug.Log("Attack2");
+            } else if (_playerAnimInfo.IsName("Attack3")) {
+                Debug.Log("Attack3");
+            }
+            _hitCount = 0;   //将hitCount重置为0，即Idle状态
+            _animator.SetInteger("Attack1", _hitCount);
+        } else {
+            if (_playerAnimInfo.IsName("Attack3")) {
+                _hitCount = 0;   //将hitCount重置为0，即Idle状态
+                _animator.SetInteger("Attack1", _hitCount);
+            }
         }
     }
 
-    void Start() {
-
-    }
-
-    void Update() {
-        _skillMgr.update();
-        _buffMgr.update();
-    }
-
-    void FixedUpdate() {
+    virtual public void FixedUpdate() {
         physicsCheck();
     }
 
@@ -67,6 +89,12 @@ public class Role : MonoBehaviour {
     virtual public void moveRole(float x, float y) {
         Vector2 transformValue = new Vector2(x * speed.x, _rigidbody.velocity.y);
         //_rigidbody.AddForce(transformValue * speed);
+        if (x != 0) {
+            _animator.SetBool("Run", true);
+        } else {
+            _animator.SetBool("Run", false);
+        }
+
         _rigidbody.velocity = transformValue;
         filpDirction();
     }
@@ -89,7 +117,27 @@ public class Role : MonoBehaviour {
     }
 
     virtual public bool attack() {
-        return false;
+        _playerAnimInfo = _animator.GetCurrentAnimatorStateInfo(0);
+        if (_playerAnimInfo.IsName("Idle") && _hitCount == 0) {
+            _hitCount = 1;
+            _animator.SetInteger("Attack1", _hitCount);
+        } else if (_playerAnimInfo.IsName("Attack1") && _hitCount == 1 && _playerAnimInfo.normalizedTime > 0.5f) {
+            _hitCount = 2;
+            _animator.SetInteger("Attack1", _hitCount);
+        } else if (_playerAnimInfo.IsName("Attack2") && _hitCount == 2 && _playerAnimInfo.normalizedTime > 0.5f) {
+            _hitCount = 3;
+            _animator.SetInteger("Attack1", _hitCount);
+        }
+        return true;
+    }
+
+    virtual public void onAttack1() {
+    }
+
+    virtual public void onAttack2() {
+    }
+
+    virtual public void onAttack3() {
     }
 
     virtual public void dead() {
